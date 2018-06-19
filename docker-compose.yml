@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  accunetapi:
+    image: ${DOCKER_REGISTRY}accunetapi
+    build:
+      context: .\Services\AccuNetAPI
+      dockerfile: Dockerfile
+
+  accucoreapi:
+    image: ${DOCKER_REGISTRY}accucoreapi
+    build:
+      context: .
+      dockerfile: Services\AccuCoreAPI\Dockerfile
+
