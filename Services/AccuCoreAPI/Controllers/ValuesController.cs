@@ -13,7 +13,7 @@ namespace AccuCoreAPI.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1xx", "value2xx" };
+            return new string[] { "value1yy", "value2yy" };
         }
 
         // GET api/values/5
