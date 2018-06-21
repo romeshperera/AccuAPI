@@ -13,7 +13,7 @@ namespace AccuCoreAPI.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1yy", "value2yy" };
+            return new string[] { "FramWapper: "+ NetFramWapper.NetFrameWap.Add(1,2).ToString(), "StdWapper: "+ NetStdWapper.NetStdWap.Add(1,2).ToString(), "CoreWapper: " + NetCoreWapper.NetCoreWap.Add(1,2).ToString() };
         }
 
         // GET api/values/5
