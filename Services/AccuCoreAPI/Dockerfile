@@ -4,10 +4,13 @@ EXPOSE 80
 
 FROM microsoft/aspnetcore-build:2.0-nanoserver-sac2016 AS build
 WORKDIR /src
-COPY AccuCoreAPI.csproj Services/AccuCoreAPI/
-RUN dotnet restore Services/AccuCoreAPI/AccuCoreAPI.csproj
+COPY AccuCoreAPI.csproj .
+RUN ls
+RUN dotnet restore AccuCoreAPI.csproj
 COPY . .
-WORKDIR /src/Services/AccuCoreAPI
+RUN ls
+WORKDIR /src
+RUN ls
 RUN dotnet build AccuCoreAPI.csproj -c Release -o /app
 
 FROM build AS publish
@@ -17,3 +20,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "AccuCoreAPI.dll"]
+
