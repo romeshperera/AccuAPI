@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\NetCoreWapper\NetCoreWapper.csproj" />
-    <ProjectReference Include="..\..\Core\NetFramWapper\NetFramWapper.csproj" />
     <ProjectReference Include="..\..\Core\NetStdWapper\NetStdWapper.csproj" />
   </ItemGroup>
 

@@ -1,16 +1,16 @@
-FROM microsoft/aspnetcore:2.0-nanoserver-sac2016 AS base
+FROM microsoft/aspnetcore AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.0-nanoserver-sac2016 AS build
+FROM microsoft/aspnetcore-build AS build
+WORKDIR /Core
+COPY Core .
 WORKDIR /src
-COPY AccuCoreAPI.csproj .
-RUN ls
+COPY Services/AccuCoreAPI/AccuCoreAPI.csproj .
+#RUN ls
 RUN dotnet restore AccuCoreAPI.csproj
-COPY . .
-RUN ls
+COPY Services/AccuCoreAPI .
 WORKDIR /src
-RUN ls
 RUN dotnet build AccuCoreAPI.csproj -c Release -o /app
 
 FROM build AS publish

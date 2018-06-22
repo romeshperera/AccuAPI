@@ -16,14 +16,14 @@ namespace AccuCoreAPI.Controllers
             string frm = String.Empty;
             string std = String.Empty;
             string core = String.Empty;
-            try
-            {
-                frm = NetFramWapper.NetFrameWap.Add(1, 2).ToString();
-            }
-            catch (Exception ex)
-            { 
-                frm = "FAILED - " + ex.Message;
-            }
+            //try
+            //{
+            //    frm = NetFramWapper.NetFrameWap.Add(1, 2).ToString();
+            //}
+            //catch (Exception ex)
+            //{ 
+            //    frm = "FAILED - " + ex.Message;
+            //}
 
             try
             {
