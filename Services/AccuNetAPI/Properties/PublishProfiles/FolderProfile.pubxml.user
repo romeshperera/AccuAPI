@@ -6,35 +6,62 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>c:\users\administrator\source\repos\AMAPI\AccuAPI\Services\AccuNetAPI\obj\Docker\Publish</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Administrator\source\repos\AMAPI\AccuAPI\Services\AccuNetAPI\obj\Docker\Publish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/AccuNetAPI.dll">
-      <publishTime>06/19/2018 17:45:18</publishTime>
+      <publishTime>06/22/2018 10:00:37</publishTime>
     </File>
     <File Include="bin/AccuNetAPI.pdb">
-      <publishTime>06/19/2018 17:45:18</publishTime>
+      <publishTime>06/22/2018 10:00:37</publishTime>
+    </File>
+    <File Include="bin/DLLs/Demo.dll">
+      <publishTime>06/14/2018 16:52:31</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>07/25/2012 11:48:56</publishTime>
     </File>
+    <File Include="bin/NetFramWapper.dll">
+      <publishTime>06/22/2018 09:27:31</publishTime>
+    </File>
+    <File Include="bin/NetFramWapper.pdb">
+      <publishTime>06/22/2018 09:27:31</publishTime>
+    </File>
+    <File Include="bin/NetStdWapper.dll">
+      <publishTime>06/22/2018 09:27:31</publishTime>
+    </File>
+    <File Include="bin/NetStdWapper.pdb">
+      <publishTime>06/22/2018 09:27:31</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 04:02:42</publishTime>
+    </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>02/01/2018 11:20:56</publishTime>
+      <publishTime>02/01/2018 12:20:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/28/2015 04:02:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/28/2015 04:03:46</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>02/01/2018 11:16:32</publishTime>
+      <publishTime>02/01/2018 12:16:32</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>02/01/2018 11:16:56</publishTime>
+      <publishTime>02/01/2018 12:16:56</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Deployment.dll">
-      <publishTime>02/01/2018 11:20:56</publishTime>
+      <publishTime>02/01/2018 12:20:56</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.dll">
-      <publishTime>02/01/2018 11:20:56</publishTime>
+      <publishTime>02/01/2018 12:20:56</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Razor.dll">
-      <publishTime>02/01/2018 11:20:56</publishTime>
+      <publishTime>02/01/2018 12:20:56</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>06/19/2018 17:15:58</publishTime>
@@ -43,7 +70,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/19/2018 17:15:58</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/19/2018 17:45:19</publishTime>
+      <publishTime>06/22/2018 09:59:58</publishTime>
     </File>
   </ItemGroup>
 </Project>
