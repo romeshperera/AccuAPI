@@ -129,6 +129,16 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\NetFramWapper\NetFramWapper.csproj">
+      <Project>{a11bc12e-5bd4-4f23-9644-ca9e8bbda1dc}</Project>
+      <Name>NetFramWapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\NetStdWapper\NetStdWapper.csproj">
+      <Project>{4f116f77-48fe-4562-9e52-9c3d20f9f47c}</Project>
+      <Name>NetStdWapper</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
