@@ -43,7 +43,7 @@ namespace AccuCoreAPI.Controllers
                 core = "FAILED - " + ex.Message;
             }
 
-            return new string[] { "FramWapper: "+ frm, "StdWapper: "+ std, "CoreWapper: " + core };
+            return new string[] { "FramWapper: "+ frm, "XStdWapper: "+ std, "XCoreWapper: " + core };
         }
 
         // GET api/values/5
