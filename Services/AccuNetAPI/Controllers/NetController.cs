@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Sockets;
 using System.Web.Http;
 
 namespace AccuNetAPI.Controllers
@@ -15,6 +16,7 @@ namespace AccuNetAPI.Controllers
             string frm = String.Empty;
             string std = String.Empty;
             string core = String.Empty;
+            string host = String.Empty;
             try
             {
                 frm = NetFramWapper.NetFrameWap.Add(1, 2).ToString();
@@ -42,7 +44,23 @@ namespace AccuNetAPI.Controllers
             //    core = "FAILED - " + ex.Message;
             //}
 
-            return new string[] { "FramWapper: " + frm, "StdWapper: " + std, "CoreWapper: " + core };
+            try
+            {
+                host = Dns.GetHostName() + " - ";
+                IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
+                foreach (IPAddress addr in localIPs)
+                {
+                    if (addr.AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        host = addr + " : ";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return new string[] { "FramWapper: " + frm, "StdWapper: " + std, "CoreWapper: " + core, "Host: " + host };
         }
 
         // GET: api/Net/5

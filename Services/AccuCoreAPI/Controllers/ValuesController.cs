@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +18,7 @@ namespace AccuCoreAPI.Controllers
             string frm = String.Empty;
             string std = String.Empty;
             string core = String.Empty;
+            string host = String.Empty;
             //try
             //{
             //    frm = NetFramWapper.NetFrameWap.Add(1, 2).ToString();
@@ -43,7 +46,23 @@ namespace AccuCoreAPI.Controllers
                 core = "FAILED - " + ex.Message;
             }
 
-            return new string[] { "FramWapper: "+ frm, "XStdWapper: "+ std, "XCoreWapper: " + core };
+            try
+            {
+                host = Dns.GetHostName() + " - ";
+                IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
+                foreach (IPAddress addr in localIPs)
+                {
+                    if (addr.AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        host = addr + " : ";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return new string[] { "FramWapper: "+ frm, "XStdWapper: "+ std, "XCoreWapper: " + core, "Host: " + host };
         }
 
         // GET api/values/5
